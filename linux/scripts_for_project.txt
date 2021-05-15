@@ -1,0 +1,26 @@
+ssh sysadmin@13.82.196.35
+sudo apt update
+sudo apt install docker.io
+sudo systemctl status docker
+sudo systemctl start docker
+sudo docker pull cyberxsecurity/ansible
+docker run -ti cyberxsecurity/ansible:latest bash
+sudo docker container list -a
+sudo docker container start objective_moser
+sudo docker container attach objective_moser
+ssh-keygen
+ls .ssh/
+cat .ssh/id_rsa.pub
+ssh sysadmin@10.1.0.5
+nano /etc/ansible/hosts
+nano /etc/ansible/ansible.cfg
+nano /etc/ansible/pentest.yml
+ansible all -m ping
+ansible-playbook /etc/ansible/pentest.yml
+nano /etc/ansible/elk.yml
+ansible-playbook /etc/ansible/elk.yml
+nano /etc/ansible/filebeat-config.yml
+nano /etc/ansible/filebeat-playbook.yml
+mkdir /etc/ansible/files
+mv /etc/ansible/filebeat-config.yml /etc/ansible/files/
+ansible-playbook /etc/ansible/filebeat-playbook.yml
